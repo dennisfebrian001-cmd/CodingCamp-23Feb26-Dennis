@@ -1,0 +1,31 @@
+/* Custom reusable class */
+.hq-card {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #06b6d4, #0f172a);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.hq-card:hover {
+    transform: scale(1.1);
+}
+
+.input-style {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.input-style:focus {
+    outline: none;
+    border-color: #06b6d4;
+    box-shadow: 0 0 5px rgba(6, 182, 212, 0.5);
+}
