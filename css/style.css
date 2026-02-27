@@ -1,31 +1,100 @@
-/* Custom reusable class */
+/* ================= HQ CARD ================= */
 .hq-card {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    background: linear-gradient(to right, #06b6d4, #0f172a);
-    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.hq-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    transition: 0.4s;
+}
+
+.hq-card span {
+    position: relative;
+    color: white;
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.3s;
+    font-size: 20px;
+    z-index: 2;
 }
 
 .hq-card:hover {
     transform: scale(1.1);
 }
 
+.hq-card:hover::before {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* Background Images */
+.jakarta {
+    background-image: url("https://wallup.net/wp-content/uploads/2016/07/20/43409-Jakarta-city-cityscape.jpg");
+}
+
+.bandung {
+    background-image: url("https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/jsk0lmcdjrgw2qj59jpg/BandungCityTourwithHigh-SpeedRail(Whoosh)fromJakarta.jpg");
+}
+
+.surabaya {
+    background-image: url("https://melampa.com/wp-content/uploads/2018/03/Ikon-kota-Surabaya.jpg");
+}
+
+/* ================= INPUT STYLE ================= */
 .input-style {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
+    transition: 0.3s;
 }
 
 .input-style:focus {
     outline: none;
     border-color: #06b6d4;
     box-shadow: 0 0 5px rgba(6, 182, 212, 0.5);
+}
+
+input[type="radio"] {
+    accent-color: #06b6d4;
+}
+
+/* ================= HAMBURGER ================= */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Animation when active */
+.menu-open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile: center hq-card */
+@media (max-width: 640px) {
+    .hq-card {
+        margin: 0 auto;
+    }
 }
