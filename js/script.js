@@ -1,4 +1,3 @@
-// Welcome Text
 document.addEventListener("DOMContentLoaded", function () {
     let name = prompt("Enter your name:");
 
@@ -7,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Validation
 function validateForm() {
 
     let name = document.forms["messageForm"]["name"].value.trim();
@@ -47,13 +45,11 @@ function validateForm() {
 }
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Welcome Text
-    let name = prompt("Enter your name:");
+   let name = prompt("Enter your name:");
     if (name && name.trim() !== "") {
         document.getElementById("username").innerText = name;
     }
 
-    // Hamburger Menu
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
 
